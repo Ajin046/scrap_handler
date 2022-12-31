@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+ }
+ body{
+    background-color: #f8f9fc;
+ }
+ section{
+    width: 100vmin;
+    height: 100vh;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+ 
+ }
+ .tile{
+    height: 200px;
+    width: 170px;
+    position: relative;
+    border: 1px solid white;
+ 
+ }
+ input[type="checkbox"]{
+    -webkit-appearance: none;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    outline: none;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+ 
+ 
+ }
+ input[type="checkbox"]::after{
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f111";
+    font-size: 22px;
+    top: 10px;
+    left: 10px;
+    color: #e2e6f3;
+    
+ 
+ }
+ input[type="checkbox"]:hover{
+    transform: scale(1.08);
+ }
+ input[type="checkbox"]:checked{
+    border: 3px solid #21aa05;
+    
+ }
+ input[type="checkbox"]:checked:after{
+    font-weight: 900;
+    content: "\f058";
+    color: #21aa05;
+ }
+ label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+ 
+ }
+ label{
+    font-size: 45px;
+    color: #2c2c51;
+ 
+ }
+ input[type="checkbox"]:checked+label{
+    animation: grow 0.5s;
+    
+ }
+ @keyframes grow{
+    50%{
+       font-size: 80px;
+    }
+ }
+ label h6{
+    font-family: "Poppins",sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #7b7b93;
+ }

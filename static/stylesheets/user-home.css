@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+    
+   }
+   #or{ 
+        background-color: #50C878; 
+        height: 420px;
+        width: 1770px;
+  }
+  #pq{ 
+    background-color: #fff9f9; 
+    height: 200px;
+    width: 800px;
+    position:relative; left:480px; bottom: 150px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   }
+  #tt{
+    position: relative;
+    top: 190px
+  }
+
+  #ht{
+     position: relative;
+     top: 250px;
+  }
+  #accEx{
+     min-height: 20vh;
+     padding: 200px;
+     background: linear-gradient(75.7deg, rgb(34, 126, 34) 3.8%, rgb(99, 162, 17) 87.1%);
+  }
+  #mv{
+     min-height: 20vh;
+     background-color: #fcfdfb;
+  }
+   #uk{
+    min-height: 100vh;
+  }
+  #accordionFlushExample{
+    position: relative;
+    top:250px;
+  }
+  #footer {
+    min-height: 5vh;
+    background: #120F16;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e8ffef;
+}
+  #footer h2 {
+    font-size: 30px;
+    text-decoration: underline;
+}

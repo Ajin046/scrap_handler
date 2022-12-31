@@ -1,0 +1,83 @@
+* {
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+    background: linear-gradient(to right, #134E5E, #71B280);
+}
+
+.form-contatiner {
+    /* background: url("https://www.spasrecycling.com/wp-content/uploads/2019/12/cropped-Spas-Recycling-Banner.jpg"); */
+    background: #fff;
+    width: 50vw;
+    padding: 20px 50px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+}
+
+.alert-box {
+    width: 80vw;
+    background-color: #cffacf;
+    padding: 3vh 1vw;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(17, 94, 58);
+    margin-top: 10px;
+}
+
+.form-contatiner .field-group {
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+    margin-bottom: 10px;
+}
+
+.form-contatiner input {
+    font-size: 18px;
+    background: #cffacf;
+    padding: 10px 20px;
+    width: 23vw;
+}
+
+.form-contatiner h1 {
+    margin: 20px;
+}
+
+.form-contatiner form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-contatiner label {
+    font-size: 20px;
+}
+
+
+
+.form-contatiner form button {
+    font-size: 18px;
+    width: 43vw;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #555755;
+    color: white;
+    transition: all .4s;
+
+}
+
+.form-contatiner form button:hover {
+    color: #555755;
+    background: #ddd;
+}

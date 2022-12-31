@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrap_select</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static '/stylesheets/scrap_selecter.css' %}">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid ">
+          <a class="navbar-brand text-secondary fs-1 fw-bold" href="#">Scrap Picker</a>
+          <button class="navbar-toggler shadow-none " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-xl-end " id="navbarNavAltMarkup">
+            <div class="navbar-nav " >
+              <a class="nav-link active" aria-current="page" href="{%url 'index'%}">Home</a>
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Account
+                </a>
+                <ul class="dropdown-menu mb-2 bg-success text-white" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item text-light" href="{%url 'user_pro'%}">My profile</a></li>
+                  <li><a class="dropdown-item text-light" href="#">about</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-light" href="#">Feedback</a></li>
+                </ul>
+              </li>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+    
+
+
+
+
+
+
+
+
+    <section>
+        <div class="tile">
+            <input type="checkbox" name="waste_type" id="plastic bottle">
+            <label for="sport1">
+                <i class="fa-solid fa-bottle-water"></i>
+                <h6>plastic bottle</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" name="waste_type" id="cartoon box">
+            <label for="sport2">
+                <i class="fa-solid fa-box-open"></i>
+                <h6>cartoon box</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" name="waste_type" id="e-waste">
+            <label for="sport3">
+                <i class="fa-solid fa-biohazard"></i>
+                <h6>e-waste</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" name="waste_type" id="metals">
+            <label for="sport4">
+                <i class="fa-solid fa-tape"></i>
+                <h6>metals</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" name="waste_type" id="battery">
+            <label for="sport5">
+                <i class="fa-sharp fa-solid fa-car-battery"></i>
+                <h6>battery</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" name="waste_type" id="paper">
+            <label for="sport6">
+                <i class="fa-solid fa-square-full"></i>
+                <h6>paper</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" name="waste_type" id="home appliance">
+            <label for="sport7">
+                <i class="fa-sharp fa-solid fa-blender-phone"></i>
+                <h6>home appliance</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" name="waste_type" id="others">
+            <label for="sport8">
+                <i class="fa-sharp fa-solid fa-radiation"></i>
+                <h6>others</h6>
+            </label>
+        </div><br>
+        <a class="btn btn-success sunmit_btn w-100 my-4 shadow-none" id="next-btn" type="submit" href="">Next</a>
+        
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+</body>
+<script>
+    document.querySelector("#next-btn").addEventListener("click",(e)=>{
+        e.preventDefault()
+        let markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+        markedCheckbox = Array.from(markedCheckbox)
+        let list = markedCheckbox.map((a)=>{
+            return (a.id)
+
+        })
+        let val = list.join(" , ")
+        val = `url 'user_con' items='${val}' `
+        val = ["{","% ",val," %","}"].join('')
+    })
+
+</script>
+
+</html>
